@@ -47,7 +47,7 @@ sub Project()
   {
     print $fh "EDM_WRITE_CONFIG:=edmWriteConfigs\n";
     print $fh "EDM_CHECK_CLASS_VERSION:=\$(SCRAM_SOURCEDIR)/FWCore/Utilities/scripts/edmCheckClassVersion\n";  
-    print $fh "EDM_CHECK_CLASS_TRANSIENTS=\$(SCRAM_SOURCEDIR)/FWCore/Utilities/scripts/edmCheckClassTransients\n";
+    print $fh "EDM_CHECK_CLASS_TRANSIENTS=true\n";
     if ($ENV{SCRAM_PROJECTVERSION}=~/_ASAN_/)
     {
       print $fh "EDM_TOOLS_PREFIX:=LD_PRELOAD=\$(GCC_CXXCOMPILER_BASE)/lib64/libasan.so\n";
